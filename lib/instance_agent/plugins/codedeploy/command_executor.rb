@@ -1,6 +1,6 @@
 require 'openssl'
 require 'fileutils'
-require 'aws-sdk-core'
+#require 'aws-sdk-core'
 require 'zlib'
 require 'zip'
 require 'instance_metadata'
@@ -12,6 +12,8 @@ require 'instance_agent/plugins/codedeploy/command_poller'
 require 'instance_agent/plugins/codedeploy/deployment_specification'
 require 'instance_agent/plugins/codedeploy/hook_executor'
 require 'instance_agent/plugins/codedeploy/installer'
+
+load '/opt/codedeploy-agent/vendor/gems/aws-sdk-core-2.10.46/lib/seahorse/util.rb' 
 
 module InstanceAgent
   module Plugins
